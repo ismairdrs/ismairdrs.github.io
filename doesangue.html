@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doe sangue! Doe Vida!</title>
 </head>
@@ -17,10 +18,10 @@
     </header>
     <section class="form hide">
         <h2>Entre na lista de doadores</h2>
-        <form action="/" method="POST">
-            <input type="text" name="name" placeholder="Nome Completo">
-            <input type="text" name="email" placeholder="Email">
-            <input type="text" name="blood" placeholder="Tipo Sanguíneo">
+        <form action="" method="POST">
+            <input type="text" name="nome" id="nome" placeholder="Nome Completo">
+            <input type="text" name="email" id="email" placeholder="Email">
+            <input type="text" name="blood" id="tipo_sanguineo" placeholder="Tipo Sanguíneo">
             <button>Quero ajudar!</button>
         </form>
     </section>
@@ -28,21 +29,94 @@
     <main>
         <h2>Últimos <span>doadores</span></h2>
         <section class="donors">
-            {% for donor in donors %}
                 <div class="donor">
-                    <div class="blood">{{donor.blood}}</div>
-                    <p>{{donor.name}}</p>
+                    <div class="blood">O+</div>
+                    <p>Ismair Junior</p>
                 </div>
-            {%endfor%}
+                <div class="donor">
+                    <div class="blood">AB+</div>
+                    <p>Fernanda Daibert</p>
+                </div>
+                <div class="donor">
+                    <div class="blood">A-</div>
+                    <p>Mayk Brito</p>
+                </div>
+                <div class="donor">
+                    <div class="blood">AB+</div>
+                    <p>Diego Fernandes</p>
+                </div>
+            
         </section>
     </main>
     <footer> Com ❤️ Ismair</footer>
+
     <script>
-    document.querySelector('header button').addEventListener("click",function(){
-    document.querySelector('.form').classList.toggle('hide')
+        //variáveis globais
+        var campo_nome = document.querySelector("input[name='nome'")
+        var campo_tipo_sanguineo = document.querySelector("input[name='blood'")
+        var corpo_doadores = document.querySelector("main section")
+        //objetos
+        function Doador(nome, blood)
+        {
+            this.nome = nome
+            this.blood = blood
 
-})
+            this.criar_div_doador = function(){
+                //criar elementos
+                var div_donor = document.createElement("div")
+                var div_blood = document.createElement("div")
+                var tag_p = document.createElement("p")
 
+                //aplicar estilo
+                div_donor.className = "donor"
+                div_blood.className = "blood"
+
+                //criar nós
+                var texto_nome = document.createTextNode(this.nome)
+                var texto_tipo_sanguineo = document.createTextNode(this.blood)
+
+                //vincular os nós aos elementos
+                div_blood.appendChild(texto_tipo_sanguineo)
+                tag_p.appendChild(texto_nome)
+                div_donor.appendChild(div_blood)
+                div_donor.appendChild(tag_p)
+
+                //vincular os elmenetos ao documento
+                corpo_doadores.appendChild(div_donor)
+
+            }
+        }
+
+        //funções
+        function adicionar_dados(event)
+        {
+            function limpar(){
+                document.getElementById('nome').value=''
+                document.getElementById('tipo_sanguineo').value=''
+                document.getElementById('email').value=''
+            }
+
+            event.preventDefault();
+            var nome = campo_nome.value
+            var sangue = campo_tipo_sanguineo.value
+
+            if(nome == "" || sangue == "")
+            {
+                alert("Dados inválidos!")
+            }else{
+                novo_doador = new Doador(nome, sangue)
+                novo_doador.criar_div_doador()
+                limpar()
+            }
+        }
+        
+        
+        //eventos nos botões
+        document.querySelector('header button').addEventListener("click",function(){
+                document.querySelector('.form').classList.toggle('hide')
+        })
+
+        document.querySelector('form button').addEventListener("click", adicionar_dados)
     </script>
 </body>
 
