@@ -7,4 +7,3 @@ Este projeto contempla vários pequenos projetos de desenvolvimento afim de deix
 
 ![](./pbi_endereço.PNG)
 
-![](./pbi_kanban.PNG)
