@@ -2,7 +2,7 @@
 
 Projeto de página pessoal 
 visite: 
-https://ismairdrs.github.io/"
+https://ismairdrs.github.io/
 
 
 
