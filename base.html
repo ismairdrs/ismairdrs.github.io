@@ -1,31 +1,30 @@
-<!-- base.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Seu Site</title>
-    <!-- Estilos comuns -->
+    <title>Título padrão</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Sidebar com menu -->
-    <aside>
+    <div id="sidebar">
+        <!-- Conteúdo do menu, cabeçalho, etc. -->
+        <h2>Menu</h2>
         <ul>
             <li><a href="index.html">Página Inicial</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <!-- Adicione outros links aqui conforme necessário -->
+            <li class="li"><a href="#desenvolvedor">Desenvolvedor</span></a></li>
+						<li><a href="#rpa" class="li">RPA</a></li>
+						<li><a href="#bi" class="li">Power BI</a></li>
+						<li><a href="#formacoes" class="li">Formações</a></li>
+						<li><a href="#certificados" class="li">Certificados</a></li>
+						<li><a href="#experiencia" class="li">Experiência</a></li>
+						<li><a href="#habilidades" class="li">Habilidades</a></li>
+            <!-- Adicione mais links conforme necessário -->
         </ul>
-    </aside>
+    </div>
+    <div id="content">
+        <!-- O conteúdo da página será carregado aqui -->
+    </div>
 
-    <!-- Conteúdo variável das páginas -->
-    <main>
-        <!-- Esta parte será substituída pelo conteúdo de cada página individual -->
-        <!-- Utilize JavaScript para carregar o conteúdo dinamicamente -->
-    </main>
-
-    <!-- Scripts comuns -->
-    <script src="scripts.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
