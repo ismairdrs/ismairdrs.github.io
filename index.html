@@ -1,22 +1,61 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Blog</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Blog</title>
+  <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=5, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
-    <div id="sidebar">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="post_clean_code_14_02.html">Clean Code</a></li>
-            <li><a href="post_clean_architecture_15_02.html">Clean Architecture</a></li>
-            <!-- Adicione mais links conforme necessário -->
-        </ul>
-    </div>
-    <div id="content">
-        <!-- Aqui você pode adicionar uma introdução ou outra informação sobre o blog -->
-    </div>
+  <header>
+    <h1>Meu Blog</h1>
+  </header>
+  <main>
+    <section id="sidebar">
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="post_clean_code_14_02.html">Clean Code</a></li>
+        <li><a href="post_clean_architecture_15_02.html">Clean Architecture</a></li>
+      </ul>
+    </section>
+    <section id="conteudo">
+      <h2>Artigos Recentes</h2>
+      <article>
+        <h3>Título do Artigo</h3>
+        <p>Resumo do artigo...</p>
+        <a href="#">Ler mais...</a>
+      </article>
+      <article>
+        <h3>Outro Título de Artigo</h3>
+        <p>Resumo do outro artigo...</p>
+        <a href="#">Ler mais...</a>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright &copy; 2024 - Seu Nome</p>
+  </footer>
+
+<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/ismairjunior/" class="icon brands fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
+				<li><a href="https://github.com/ismairdrs" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
+				<li><a href="https://api.whatsapp.com/send?phone=5562981386588" class="icon brands fa-whatsapp" target="_blank"><span class="label">Whatsapp</span></a></li>
+				<li><a href="mailto:ismairdrs@gmail.com" class="icon solid fa-envelope" target="_blank"><span class="label">Email</span></a></li>
+			</ul>
+		</div>
+	</footer>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 </body>
 </html>
